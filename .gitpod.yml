@@ -1,0 +1,19 @@
+additionalRepositories:
+  - url: https://man7.org/tlpi/code/download/tlpi-221220-dist.tar.gz
+    checkoutLocation: tlpi
+
+tasks:
+  - name: dependencies
+    before: |
+      cd ../tlpi
+    init: |
+      echo Installing TLPI dependencies
+    command: |
+      ls
+
+  - name: compile tlpi
+    init: |
+      cd ../tlpi
+    command: |
+      echo Compiling TLPI
+      make -j$(nproc)
