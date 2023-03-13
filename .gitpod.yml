@@ -3,18 +3,13 @@ additionalRepositories:
     checkoutLocation: tlpi
 
 tasks:
-  - name: dependencies
+  - name: install dependencies & compile
     before: |
       cd ../tlpi
     init: |
       echo Installing TLPI dependencies
       sudo apt update
-    command: |
       sudo apt install libcap-dev libacl1-dev -y
-
-  - name: compile tlpi
-    init: |
-      cd ../tlpi
     command: |
       echo Compiling TLPI
       make -j$(nproc)
