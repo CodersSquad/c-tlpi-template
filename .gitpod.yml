@@ -1,11 +1,5 @@
-additionalRepositories:
-  - url: https://github.com/CodersSquad/tlpi-dist.git
-    checkoutLocation: tlpi
-
 tasks:
   - name: install dependencies & compile
-    before: |
-      cd ../tlpi
     init: |
       echo Installing TLPI dependencies
       sudo apt update
