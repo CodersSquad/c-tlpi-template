@@ -8,8 +8,9 @@ tasks:
       cd ../tlpi
     init: |
       echo Installing TLPI dependencies
+      sudo apt update
     command: |
-      ls
+      sudo apt install libcap-dev libacl1-dev -y
 
   - name: compile tlpi
     init: |
