@@ -1,5 +1,5 @@
 additionalRepositories:
-  - url: https://man7.org/tlpi/code/download/tlpi-221220-dist.tar.gz
+  - url: https://github.com/CodersSquad/tlpi-dist.git
     checkoutLocation: tlpi
 
 tasks:
